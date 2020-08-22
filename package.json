@@ -1,6 +1,6 @@
 {
   "name": "@ajmchambers/al-card",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/custom-elements/index.js",
@@ -10,6 +10,9 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/al-card/al-card.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist/",
     "loader/"
@@ -27,7 +30,9 @@
   "license": "MIT",
   "devDependencies": {
     "@stencil/postcss": "^1.0.1",
+    "@stencil/react-output-target": "0.0.9",
     "@stencil/sass": "^1.3.2",
+    "@types/autoprefixer": "^9.7.2",
     "autoprefixer": "^9.8.6"
   }
 }
