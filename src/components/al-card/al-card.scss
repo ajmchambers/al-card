@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  width: 300px;
+  height: 400px;
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__side {
+    height: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+
+    &--front {
+      background-color: #fff;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      background-color: #777;
+    }
+
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
