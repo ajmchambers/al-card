@@ -10,7 +10,9 @@ export const config: Config = {
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@ajmchambers/al-card',
-      proxiesFile: '../al-card-react/src/components.ts'
+      proxiesFile: '../al-card-react/src/components.ts',
+      includeDefineCustomElements: true,
+      includePolyfills: true
     }),
     {
       type: 'dist',
